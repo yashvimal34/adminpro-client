@@ -36,7 +36,7 @@ export default function AddProductForm() {
       }
 
       // POST request (Authorization header required)
-      await axios.post("http://localhost:5000/api/products", data, {
+      await axios.post("https://adminpro-server-n5dp.onrender.com/api/products", data, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "multipart/form-data"

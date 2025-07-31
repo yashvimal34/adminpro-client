@@ -55,7 +55,7 @@ export default function EditProductForm({ product, onCancel, onProductUpdated })
       }
 
       const res = await axios.put(
-        `http://localhost:5000/api/products/${product._id}`,
+        `https://adminpro-server-n5dp.onrender.com/api/products/${product._id}`,
         data, // CHANGED: send FormData instead of JSON
         {
           headers: {

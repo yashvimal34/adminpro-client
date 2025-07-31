@@ -15,7 +15,7 @@ export default function ProductsPage() {
   const fetchProducts = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get("http://localhost:5000/api/products", {
+      const response = await axios.get("https://adminpro-server-n5dp.onrender.com/api/products", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -100,7 +100,7 @@ export default function ProductsPage() {
 
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:5000/api/products/${id}`, {
+      await axios.delete(`https://adminpro-server-n5dp.onrender.com/api/products/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

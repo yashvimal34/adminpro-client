@@ -15,7 +15,7 @@ export default function SettingsPage() {
   const [showLogin, setShowLogin] = useState(true);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/settings")
+    axios.get("https://adminpro-server-n5dp.onrender.com/api/settings")
       .then(res => {
         setName(res.data.name || "");
         setEmail(res.data.email || "");
@@ -29,7 +29,7 @@ export default function SettingsPage() {
 
   const handleSave = async () => {
     try {
-      await axios.put("http://localhost:5000/api/users/profile/me", {
+      await axios.put("https://adminpro-server-n5dp.onrender.com/api/users/profile/me", {
   name,
   email,
   receiveEmails: emailNotifications

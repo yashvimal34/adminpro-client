@@ -62,7 +62,7 @@ export default function AuthPage() {
       if (isLogin) {
         // LOGIN
         const res = await axios.post(
-          "http://localhost:5000/api/auth/login",
+          "https://adminpro-server-n5dp.onrender.com/api/auth/login",
           {
             email: formData.email,
             password: formData.password,
@@ -84,7 +84,7 @@ export default function AuthPage() {
         if (formData.avatar) data.append("avatar", formData.avatar);
 
         const res = await axios.post(
-          "http://localhost:5000/api/auth/register",
+          "https://adminpro-server-n5dp.onrender.com/api/auth/register",
           data,
           { headers: { "Content-Type": "multipart/form-data" } }
         );

@@ -20,7 +20,7 @@ const UserTable = ({ users = [] }) => {
     try {
       const token = localStorage.getItem("token");
 
-      await axios.delete(`http://localhost:5000/api/users/${id}`, {
+      await axios.delete(`https://adminpro-server-n5dp.onrender.com/api/users/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

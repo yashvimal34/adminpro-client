@@ -39,7 +39,7 @@ const Users = () => {
       const token = localStorage.getItem("token");
 
       const res = await axios.get(
-        `http://localhost:5000/api/users?page=${page}&limit=5&search=${searchQuery}`,
+        `https://adminpro-server-n5dp.onrender.com/api/users?page=${page}&limit=5&search=${searchQuery}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -70,7 +70,7 @@ const Users = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.put(
-        `http://localhost:5000/api/users/${editingUser._id}`,
+        `https://adminpro-server-n5dp.onrender.com/api/users/${editingUser._id}`,
         { role, status },
         {
           headers: {
@@ -93,7 +93,7 @@ const Users = () => {
 
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:5000/api/users/${userId}`, {
+      await axios.delete(`https://adminpro-server-n5dp.onrender.com/api/users/${userId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert("User deleted successfully");

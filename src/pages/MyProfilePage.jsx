@@ -20,7 +20,7 @@ export default function MyProfilePage() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/users/profile/me", {
+        const res = await axios.get("https://adminpro-server-n5dp.onrender.com/api/users/profile/me", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -69,7 +69,7 @@ if (formData.avatar) {
 }
 
 
-      await axios.put("http://localhost:5000/api/users/profile/me", data, {
+      await axios.put("https://adminpro-server-n5dp.onrender.com/api/users/profile/me", data, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "multipart/form-data", // CHANGED
@@ -77,7 +77,7 @@ if (formData.avatar) {
       });
 
       // ✅ Step 2: Fetch updated profile data
-      const res = await axios.get("http://localhost:5000/api/users/profile/me", {
+      const res = await axios.get("https://adminpro-server-n5dp.onrender.com/api/users/profile/me", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

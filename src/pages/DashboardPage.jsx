@@ -26,13 +26,13 @@ export default function DashboardPage() {
         const token = localStorage.getItem("token");
 
         // Fetch overall stats
-        const statsRes = await axios.get("http://localhost:5000/api/users/stats", {
+        const statsRes = await axios.get("https://adminpro-server-n5dp.onrender.com/api/users/stats", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setStats(statsRes.data);
 
         // Fetch trend data
-        const trendRes = await axios.get("http://localhost:5000/api/users/trend", {
+        const trendRes = await axios.get("https://adminpro-server-n5dp.onrender.com/api/users/trend", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setTrend(trendRes.data);

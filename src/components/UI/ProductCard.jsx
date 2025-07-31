@@ -4,7 +4,7 @@ export default function ProductCard({ product, onDelete, onEdit }) {
   // CHANGED: Build correct image URL for local uploads
   const imageSrc = product.image
     ? product.image.startsWith("/uploads/") // CHANGED
-      ? `http://localhost:5000${product.image}` // CHANGED
+      ? `https://adminpro-server-n5dp.onrender.com${product.image}` // CHANGED
       : product.image // CHANGED
     : defaultImage; // CHANGED
 

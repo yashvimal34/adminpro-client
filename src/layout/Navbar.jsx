@@ -23,7 +23,7 @@ export default function Header({ toggleSidebar }) {
   const avatar =
     user?.avatar && user.avatar.trim() !== ""
       ? user.avatar.startsWith("/uploads/") // CHANGED
-        ? `http://localhost:5000${user.avatar}` // CHANGED
+        ? `https://adminpro-server-n5dp.onrender.com${user.avatar}` // CHANGED
         : user.avatar // CHANGED
       : null; // CHANGED: no avatar fallback here
 

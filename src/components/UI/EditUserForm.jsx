@@ -21,7 +21,7 @@ const EditUserForm = ({ user, onClose, onSuccess }) => {
     e.preventDefault();
     try {
       const token = localStorage.getItem("token");
-      await axios.put(`http://localhost:5000/api/users/${user._id}`, formData, {
+      await axios.put(`https://adminpro-server-n5dp.onrender.com/api/users/${user._id}`, formData, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert("User updated successfully!");

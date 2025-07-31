@@ -28,7 +28,7 @@ export default function ReportsPage() {
     try {
       const token = localStorage.getItem("token");
       const res = await axios.get(
-        `http://localhost:5000/api/orders?page=${pageNum}`,
+        `https://adminpro-server-n5dp.onrender.com/api/orders?page=${pageNum}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
