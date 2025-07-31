@@ -1,0 +1,9 @@
+/* Tailwind-styled loader bar */
+#nprogress .bar {
+  background: #2563eb; /* Tailwind blue-600 */
+  height: 4px;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px #2563eb, 0 0 5px #2563eb;
+}
